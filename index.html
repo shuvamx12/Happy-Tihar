@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shuvam’s Tihar Gift Palace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;500;600&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mdl" viewBox="0 0 200 200"><g transform="translate(100 100)" fill="none" stroke="currentColor" stroke-width="1.1"><circle r="92"/><circle r="64"/><circle r="34"/><circle r="12"/><g id="pt"><path d="M0-92Q20-62 0-34Q-20-62 0-92Z"/><path d="M0-64Q11-46 0-34Q-11-46 0-64Z"/></g><use href="#pt" transform="rotate(45)"/><use href="#pt" transform="rotate(90)"/><use href="#pt" transform="rotate(135)"/><use href="#pt" transform="rotate(180)"/><use href="#pt" transform="rotate(225)"/><use href="#pt" transform="rotate(270)"/><use href="#pt" transform="rotate(315)"/></g></symbol></svg>
+
+<canvas id="fx"></canvas>
+<div id="petals"></div>
+<div id="toast" role="status"></div>
+<div id="eat" aria-live="polite"></div>
+<audio id="song" loop preload="none" playsinline></audio>
+<button id="bgm" aria-pressed="false">♫ Tihar Song</button>
+<button id="snd" aria-pressed="true">♪ Sound: On</button>
+
+<header id="hero">
+  <div class="gar"></div><div class="gar g2"></div>
+  <div class="hang l"></div><div class="hang r"></div>
+  <svg class="mdl"><use href="#mdl"/></svg>
+  <p class="eyebrow">शुभ तिहार &nbsp;·&nbsp; Shuvam presents</p>
+  <h1>Shuvam’s<br>Tihar Gift Palace</h1>
+  <p class="tag">A Celebration of Lights, Love &amp; Happiness</p>
+  <p class="lede">May your life shine brighter than a thousand diyas.</p>
+  <button class="btn" id="enter">Enter the Celebration</button>
+</header>
+
+<section id="pataka" class="rv">
+  <h2>Shuvam’s Pataka Zone 🎆</h2>
+  <p class="np">पटाका क्षेत्र</p>
+  <p class="sub">Virtual fireworks only. Light as many as you like, with no smoke and no danger.</p>
+  <div id="stage"><span>VIRTUAL LAUNCH GROUND</span></div>
+  <div class="grid" id="fwg"></div>
+  <div class="row">
+    <button class="btn ghost" id="rep">Replay last</button>
+    <button class="btn ghost" id="fin">Grand finale</button>
+  </div>
+  <p class="ctr">Fireworks lit: <b id="fc">0</b></p>
+</section>
+
+<section id="sweets" class="rv">
+  <h2>Nepali Sweet Shop</h2>
+  <p class="np">मिठाई पसल</p>
+  <p class="sub">Tap a sweet to receive a gift from Shuvam.</p>
+  <div class="grid" id="sg"></div>
+  <p class="ctr">Sweets gifted: <b id="sc">0</b></p>
+</section>
+
+<section id="diya" class="rv">
+  <h2>Light the Diyas</h2>
+  <p class="np">दियो बाल्नुहोस्</p>
+  <p class="sub">Tap each brass diya to light it.</p>
+  <div class="diyas" id="dg"></div>
+  <p class="ctr"><b id="dc">0</b> / 6 lit</p>
+</section>
+
+<section id="deusi" class="rv">
+  <h2>Deusi-Bhailo</h2>
+  <p class="np">देउसी भैलो</p>
+  <p class="sub">Groups go door to door in Tihar, singing and bringing blessings. Join in with an original tune made just for this page.</p>
+  <div class="dbwrap">
+    <svg class="mdl"><use href="#mdl"/></svg>
+    <div id="dbw">देउसिरे!</div>
+  </div>
+  <div class="row"><button class="btn" id="db">Sing Deusi-Bhailo</button></div>
+</section>
+
+<section id="gift" class="rv">
+  <h2>Mystery Gift</h2>
+  <p class="np">रहस्यमय उपहार</p>
+  <p class="sub">Tap the box. Shuvam picked something just for you.</p>
+  <div class="box" id="box"><div class="lid"></div><div class="base"></div></div>
+  <div class="reveal" id="rv">Tap to open</div>
+  <button class="btn ghost" id="again" hidden>Wrap another</button>
+</section>
+
+<section id="wish" class="rv">
+  <h2>Tihar Wish Generator</h2>
+  <p class="np">शुभकामना</p>
+  <p class="sub">Heartfelt, funny and in Nepali or English.</p>
+  <div class="wb" id="wt">Press the button for a wish</div>
+  <div class="row"><button class="btn" id="wg">New wish</button><button class="btn ghost" id="wc">Copy</button></div>
+</section>
+
+<section id="final" class="rv">
+  <h2>Happy Tihar</h2>
+  <p class="np">शुभ तिहार</p>
+  <p class="sign">With love, lights and happiness,<br>SHUVAM thw DON ❤️</p>
+  <button class="btn" id="replay">Replay Celebration</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
